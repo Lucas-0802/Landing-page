@@ -58,7 +58,8 @@ formulario.onsubmit = function(evento) {
     }
 
     if(!erro) {
-        alert('Formulário enviado!')
+        alert('Formulário enviado com sucesso!')
+        document.querySelector('#form').reset()
     }
 }
 
@@ -92,5 +93,15 @@ let formulario2 = document.querySelector('#form2')
         let span = (inputEmail.nextSibling.nextSibling)
         inputEmail.classList.remove('inputError')
         span.innerText = ''
+    }
+
+    if(!erro) {
+        const toast = document.querySelector('.toast')
+        toast.classList.add('visible')
+        setTimeout(() => {
+            toast.classList.remove('visible')
+        },5000)
+        inputEmail.value = ''
+        inputNome.value = ''
     }
 }

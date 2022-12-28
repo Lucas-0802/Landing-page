@@ -32,16 +32,21 @@
         <div class="formulario">
             <form action="#" method="get" id="form">
                 <label for="#">Nome:</label>
-                <input type="text" name="" id="nome"><br>
+                <input type="text" name="nome" id="nome">
+                <span class="erro"></span><br>
                 <label for="#">E-mail:</label>
-                <input type="text" name="" id="email"><br>
+                <input type="text" name="email" id="email">
+                <span class="erro"></span><br>
                 <label for="#">CPF:</label>
-                <input type="number" name="" id=""><br>
-                <div>
+                <input type="number" name="cpf" id="cpf">
+                <span class="erro"></span><br>
+                <div class="div">
                     <input type="radio" name="opc" id="masc" value="Masculino"> Masculino
                     <input type="radio" name="opc" id="fem" value="Feminino"> Feminino
+                    <span class="divErro"></span>
                 </div><br>
-                <button id="button">Enviar</button>
+                
+                <button type="submit" id="button">Enviar</button>
                 
             </form>
         </div>
@@ -153,13 +158,18 @@
         <h3>Quer que seus amigos também ganhem a lista personalizada deles? Prencha agora!</h3>
         <div class="compartilhe">
             <div>
-                <label for="">Nome do seu amigo:</label>
-                <input type="text" name="" id="input">
-                <label  class="label" for="">E-mail:</label>
-                <input type="text" name="" id="input">
+                <form action="" id="form2">
+                    <label for="">Nome do seu amigo:</label>
+                    <input type="text" name="nomeAmigo" id="input">
+                    <span class="erro"></span>
+                    <label  class="label" for="">E-mail:</label>
+                    <input type="text" name="emailAmigo" id="input">
+                    <span class="erro"></span>
+                
             </div>
 
-            <button class="enviarFormulario">Enviar agora</button>
+            <button type="submit" class="enviarFormulario">Enviar agora</button>
+        </form>
         </div>
 
         

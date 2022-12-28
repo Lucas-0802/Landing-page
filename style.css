@@ -93,7 +93,11 @@ body {
 
 #form input {
     padding: 5px;
-    border: 1px solid gray;
+    
+}
+
+.erro {
+    color: red;
 }
 
 #form button {
@@ -103,6 +107,16 @@ body {
     border-radius: 5px;
     font-size: 1em;
     color: gray;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #707070;
+    color: white;
+}
+
+.inputError {
+    border: 1px solid red;
 }
 
 .titulo {
@@ -170,6 +184,12 @@ body {
     font-size: 1em;
 }
 
+#comprar:hover {
+    background-color: #707070;
+    color: white;
+    cursor: pointer;
+}
+
 .maisProdutos {
     margin: auto;
     padding: 10px 20px;
@@ -179,6 +199,11 @@ body {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+}
+
+.maisProdutos:hover {
+    background-color: #707070;
+    color: white;
 }
 
 .indicar {
@@ -196,7 +221,7 @@ body {
 .compartilhe {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     align-items: center;
     
@@ -220,6 +245,11 @@ body {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+}
+
+.enviarFormulario:hover {
+    background-color: #707070;
+    color: white;
 }
 
 footer {

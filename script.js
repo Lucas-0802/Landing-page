@@ -105,3 +105,37 @@ let formulario2 = document.querySelector('#form2')
         inputNome.value = ''
     }
 }
+
+window.onload = () => 
+    fetch('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1')
+    .then(transformarEmJson)
+    .then(exibirNaTela)
+
+
+    function transformarEmJson(response) {
+       return response.json()
+    }
+
+    function exibirNaTela(dados) {
+        
+        let container = document.querySelector('.containerSelecao')
+
+        for(let c = 0; c <= dados.products.length -1; c++) {
+         container.innerHTML += ` 
+            <div class="card">
+            <div class="img"></div>
+            <span class="nome">${dados.products[c].name}</span>
+            <span class="descricao">${dados.products[c].description}</span>
+            <div><span class="span">De:</span><span class="precoAntigo">R$${dados.products[c].oldPrice}</span></div>
+            <div><strong><span class="span">Por:</span> <span class="precoAtual">R$${dados.products[c].price}</span></strong></div>
+            <span class="parc"> ou ${dados.products[c].installments.count}x de R$ ${dados.products[c].installments.value}</span>
+            <button id="comprar">Comprar</button>
+            </div>`
+       }
+
+       let maisOpcoes = document.querySelector('.maisProdutos')
+
+       maisOpcoes.onclick = function() {
+        console.log(dados.nextPage)
+       }
+    }

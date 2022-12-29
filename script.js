@@ -119,11 +119,11 @@ window.onload = () =>
     function exibirNaTela(dados) {
         
         let container = document.querySelector('.containerSelecao')
-
+        
         for(let c = 0; c <= dados.products.length -1; c++) {
          container.innerHTML += ` 
             <div class="card">
-            <div class="img"></div>
+            <div class="img"><img src="${dados.products[c].image}"></div>
             <span class="nome">${dados.products[c].name}</span>
             <span class="descricao">${dados.products[c].description}</span>
             <div><span class="span">De:</span><span class="precoAntigo">R$${dados.products[c].oldPrice}</span></div>
@@ -136,6 +136,11 @@ window.onload = () =>
        let maisOpcoes = document.querySelector('.maisProdutos')
 
        maisOpcoes.onclick = function() {
-        console.log(dados.nextPage)
+        fetch(`https://${dados.nextPage}`)
+        .then(transformarEmJson)
+        .then(exibirNaTela)
        }
     }
+
+
+    fetch('http://api.mathjs.org/v4/', {method: 'POST', body: JSON.stringify({ "expr": "20 * (((1 + 0.00517) ^ 24 - 1) / 0.00517)" })})

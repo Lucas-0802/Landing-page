@@ -1,0 +1,37 @@
+
+
+@media (max-width: 500px) {
+    .nav ul {
+       flex-wrap: wrap;
+        
+    }
+
+    .nav ul li {
+        width: 35%;
+    }
+
+    .container {
+        flex-direction: column;
+    
+    }
+
+    .conteudo {
+        margin: auto;
+        width: 100%;
+    }
+
+    .formulario {
+        margin: auto;
+        width: 100%;
+    }
+
+    .containerSelecao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+    }
+}

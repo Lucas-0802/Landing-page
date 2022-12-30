@@ -1,3 +1,4 @@
+@import url(media.css);
 
 *{
     margin: 0;
@@ -37,7 +38,7 @@ body {
 
 .nav ul {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     list-style: none;
 }
 
@@ -290,3 +291,52 @@ footer {
     padding: 50px;
 }
 
+@media (max-width: 500px) {
+    .nav ul {
+       flex-wrap: wrap;
+        
+    }
+
+    .nav ul li {
+        width: 35%;
+    }
+
+
+    .container {
+        flex-direction: column;
+    
+    }
+
+    .conteudo {
+        margin: auto;
+        width: 100%;
+    }
+
+    .formulario {
+        margin: auto;
+        width: 100%;
+    }
+
+    .containerSelecao {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .card {
+        width: 100%;
+        flex-direction: row;
+    }
+    .img {
+        width: 40%;
+    }
+
+    .maisProdutos {
+        max-width: 100%;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+    }
+}
